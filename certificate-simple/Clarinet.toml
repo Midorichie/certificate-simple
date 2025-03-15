@@ -1,0 +1,14 @@
+[project]
+name = "certificate-simple"
+requirements = []
+[contracts.certificate-registry]
+path = "contracts/certificate-registry.clar"
+depends_on = []
+
+[contracts.certificate-issuance]
+path = "contracts/certificate-issuance.clar"
+depends_on = ["certificate-registry"]
+
+[contracts.certificate-verification]
+path = "contracts/certificate-verification.clar"
+depends_on = ["certificate-registry", "certificate-issuance"]
