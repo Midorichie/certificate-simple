@@ -1,14 +1,18 @@
 [project]
-name = "certificate-simple"
+name = "certificate-system"
+authors = ["Hammed Yakub"]
+description = "A certificate management system on Stacks"
+telemetry = false
 requirements = []
+
 [contracts.certificate-registry]
-path = "contracts/certificate-registry.clar"
+path = "contracts/simple-certificate-registry.clar"
 depends_on = []
 
 [contracts.certificate-issuance]
-path = "contracts/certificate-issuance.clar"
-depends_on = ["certificate-registry"]
+path = "contracts/simple-certificate-issuance.clar"
+depends_on = []
 
 [contracts.certificate-verification]
-path = "contracts/certificate-verification.clar"
-depends_on = ["certificate-registry", "certificate-issuance"]
+path = "contracts/simple-certificate-verification.clar"
+depends_on = []
